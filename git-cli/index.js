@@ -41,6 +41,6 @@ var createOptions = {
     }
 }
 
-request(createOptions, function(err, response, body){
+request(updateOptions, function(err, response, body){
     console.log(body);
 });

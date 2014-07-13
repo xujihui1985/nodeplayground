@@ -9,4 +9,6 @@ these variable can be used in repl
 
     moment.month(10)
 
+    list(moment)  //display the methods of moment
+
 ```

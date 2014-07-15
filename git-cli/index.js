@@ -1,4 +1,5 @@
-var request = require('request');
+var tasks = require('./lib/tasks'),
+    args = process.argv.slice(2);
 
 var options = {
     //url: 'https://api.github.com/user/repos',
@@ -26,21 +27,19 @@ var updateOptions = {
     }
 };
 
-var createOptions = {
-    url: 'https://api.github.com/user/repos',
-    method: 'post',
-    headers: {
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'xujihui1985',
-        'Content-type': 'application/json',
-        'Authorization': 'Basic '+(new Buffer('xujihui1985:C8i0s4c8o6').toString('base64'))
-    },
-    json: {
-        name: 'gitcliTest',
-        description: 'this repository is created by git-cli'
-    }
+var operation = args[0];
+
+if(typeof tasks[operation] === 'function') {
+    tasks[operation]({
+        name: args[1],
+        description: args[2]
+    }, function(err, success){
+        if(err){
+            throw err;
+        }
+        console.log('success');
+    });
+}else {
+    throw new Error('not supported operation ' + operation);
 }
 
-request(updateOptions, function(err, response, body){
-    console.log(body);
-});

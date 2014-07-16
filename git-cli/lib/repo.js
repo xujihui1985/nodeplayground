@@ -1,5 +1,5 @@
 function Repo(properties) {
-    this.properties = args;
+    this.properties = properties;
 }
 
 Repo.prototype = {
@@ -11,5 +11,18 @@ Repo.prototype = {
             method: 'post',
             json: this.properties
         }
+    },
+
+    helpInfo: function(){
+        return [
+            '',
+            'push an existing repository from the command line',
+            '',
+            'git remote add origin '+this.properties.clone_url,
+            'git push -u origin master'
+        ].join('\n');
     }
+
 }
+
+module.exports = Repo;

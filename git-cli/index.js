@@ -1,4 +1,5 @@
-var GithubClient = require('./lib/githubclient.js'),
+var GithubClient = require('./lib/githubclient'),
+    Repo = require('./lib/repo'),
     args = process.argv.slice(2);
 
 var options = {
@@ -27,13 +28,13 @@ var updateOptions = {
     }
 };
 
-var operation = args[0];
-
-var gitclient = new GithubClient('xujihui1985','C8i0s4c8o6');
-gitclient.createRepo({name: args[0], description:args[1]}, function(err, result){
+var gitclient = new GithubClient('xujihui1985','C8i0s4c8o6').login();
+var repo = new Repo({name: args[0], description:args[1]});
+gitclient.createRepo(repo, function(err, repo){
     if(err){
-        return console.log('error');
+        return console.log(err);
     }
-    console.log(result);
+    console.log('successfully create new repo\n');
+    console.log(repo.helpInfo());
 });
 

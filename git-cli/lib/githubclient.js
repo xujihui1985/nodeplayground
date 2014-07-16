@@ -15,19 +15,20 @@ GithubClient.prototype = {
     constructor: GithubClient,
 
     login: function(){
-        this.headers['Authorization'] = 'Basic '+ (new Buffer(username+':'+password).toString('base64'));
+        this.headers['Authorization'] = 'Basic '+ (new Buffer(this.username+':'+this.password).toString('base64'));
+        return this;
     },
 
-    createRepo: function(properties, callback){
-        var repo = new Repo(properties);
-        repo.headers = this.headers;
-        request(repo, function(err, response, body){
+    createRepo: function(repo, callback){
+        var options = repo.create();
+        options.headers = this.headers;
+        request(options, function(err, response, body){
             if(err) {
                 return callback(err, null);
             }
-            callback(null, body);
+            repo.properties = body;
+            callback(null, repo);
         });
     }
 }
-
 module.exports = GithubClient;

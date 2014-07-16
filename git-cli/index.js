@@ -1,4 +1,4 @@
-var tasks = require('./lib/tasks'),
+var GithubClient = require('./lib/githubclient.js'),
     args = process.argv.slice(2);
 
 var options = {
@@ -29,17 +29,11 @@ var updateOptions = {
 
 var operation = args[0];
 
-if(typeof tasks[operation] === 'function') {
-    tasks[operation]({
-        name: args[1],
-        description: args[2]
-    }, function(err, success){
-        if(err){
-            throw err;
-        }
-        console.log('success');
-    });
-}else {
-    throw new Error('not supported operation ' + operation);
-}
+var gitclient = new GithubClient('xujihui1985','C8i0s4c8o6');
+gitclient.createRepo({name: args[0], description:args[1]}, function(err, result){
+    if(err){
+        return console.log('error');
+    }
+    console.log(result);
+});
 

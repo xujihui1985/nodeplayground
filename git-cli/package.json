@@ -1,7 +1,7 @@
 {
   "name": "git-cli",
-  "version": "0.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "this is a commandline tool to create github reposition",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cli-color": "^0.3.2",
+    "commander": "^2.3.0",
     "request": "^2.37.0"
   }
 }

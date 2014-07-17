@@ -1,3 +1,5 @@
+var clc = require('cli-color');
+
 function Repo(properties) {
     this.properties = properties;
 }
@@ -18,7 +20,7 @@ Repo.prototype = {
             '',
             'push an existing repository from the command line',
             '',
-            'git remote add origin '+this.properties.clone_url,
+            'git remote add origin '+clc.green(this.properties.clone_url),
             'git push -u origin master'
         ].join('\n');
     }

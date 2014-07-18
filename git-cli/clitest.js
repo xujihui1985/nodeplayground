@@ -2,6 +2,7 @@
 
 var program = require('commander'),
     clc = require('cli-color'),
+    multiline = require('multiline'),
     package = require('./package');
 
 program
@@ -10,11 +11,12 @@ program
     .option('-c, --create', 'create new reposition');
 
 program.on('--help',function(){
-    console.log([
-        '  Examples:',
-        '',
-        '  gitclient -c "new repo name" "repo description"'
-    ].join('\n'));
+    var examples = multiline(function(){/*
+        Examples:
+
+        gitclient -c "new repo name" "repo description"
+    */});
+    console.log(examples);
 });
 
 program.parse(process.argv);

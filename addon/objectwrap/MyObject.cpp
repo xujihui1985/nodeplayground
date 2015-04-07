@@ -24,7 +24,7 @@ void MyObject::Init(Handle<Object> target) {
 
 Handle<Value> MyObject::New(const Arguments& args) {
   HandleScope scope;
-  MyObject* obj = new MyObject();
+  auto obj = new MyObject();
   obj->counter_ = args[0]->IsUndefined() ? 0 : args[0]->NumberValue();
   // wrap obj into this
   obj->Wrap(args.This());

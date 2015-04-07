@@ -1,7 +1,11 @@
 var addon = require('./build/Release/addon.node');
 
-var obj = new addon.MyObject(12);
-obj.plusOne();
-obj.plusOne();
+var AnotherObject = addon.MyObject;
 
-console.log(obj.getValue());
+addon = null;
+global.gc();
+
+setTimeout(function() {
+  var obj = new AnotherObject(12);
+  console.log(obj.getValue());
+}, 4000);

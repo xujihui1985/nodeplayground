@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+<div id="container">
+  <button id="submit">Click me</button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/2.5.3/rx.lite.min.js"></script>
+<script>
+  var saveTitleToServer = function _saveTitleToServer(title) {
+    return new Promise(function (resolve, reject) {
+      setTimeout(function () {
+        resolve(title);
+      }, 2000);
+    });
+  };
+
+  var newTitleAction = new Rx.BehaviorSubject({type: 'init', target: {value: 'xxxxxxxxxx'}});
+
+  var newTitle = newTitleAction.map(function (event) {
+    return event.target.value;
+  });
+
+  var saveTitleRequest = newTitle.flatMap(function (title) {
+    return Rx.Observable.fromPromise(saveTitleToServer(title));
+  });
+
+
+  var addTitle = saveTitleRequest.map(function (value) {
+    return function (titles) {
+      titles.push(value);
+      return titles;
+    };
+  });
+
+  var titles = addTitle.scan([], function (titles, addTitleMutation) {
+    console.log('---', titles);
+    return addTitleMutation(titles);
+  });
+
+  titles.subscribe(function (value) {
+    console.log(value);
+  });
+
+
+  var submitButton = document.getElementById('submit');
+  submitButton.addEventListener('click', function () {
+    newTitleAction.onNext({type: 'init', target: {value: 'cccccccccccc'}})
+  });
+
+  var returnTrue = function () {
+    return true;
+  };
+  var returnFalse = function () {
+    return false;
+  };
+
+  var isSaving = Rx.Observable.merge(newTitle.map(returnTrue), saveTitleRequest.map(returnFalse)).startWith(false);
+
+  isSaving.subscribe(function (isSaving) {
+    if(isSaving) {
+      submitButton.setAttribute('disabled', isSaving);
+    } else {
+      submitButton.removeAttribute('disabled');
+    }
+  });
+
+  // newTitleAction.onNext({type: 'init', target: {value: 'cccccccccccc'}})
+  // newTitleAction.onNext({type: 'init', target: {value: 'cccccccccccc'}})
+
+</script>
+</body>
+</html>

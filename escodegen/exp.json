@@ -1,0 +1,1036 @@
+{
+    "type": "Program",
+    "body": [
+        {
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "type": "Identifier",
+                        "name": "ava"
+                    },
+                    "init": {
+                        "type": "CallExpression",
+                        "callee": {
+                            "type": "Identifier",
+                            "name": "require"
+                        },
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "value": "ava",
+                                "raw": "'ava'"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "kind": "const"
+        },
+        {
+            "type": "VariableDeclaration",
+            "declarations": [
+                {
+                    "type": "VariableDeclarator",
+                    "id": {
+                        "type": "Identifier",
+                        "name": "chai"
+                    },
+                    "init": {
+                        "type": "CallExpression",
+                        "callee": {
+                            "type": "Identifier",
+                            "name": "require"
+                        },
+                        "arguments": [
+                            {
+                                "type": "Literal",
+                                "value": "chai",
+                                "raw": "'chai'"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "kind": "const"
+        },
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "Identifier",
+                    "name": "test"
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "my passing test",
+                        "raw": "'my passing test'"
+                    },
+                    {
+                        "type": "ArrowFunctionExpression",
+                        "id": null,
+                        "params": [
+                            {
+                                "type": "Identifier",
+                                "name": "t"
+                            }
+                        ],
+                        "body": {
+                            "type": "BlockStatement",
+                            "body": [
+                                {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "computed": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "name": "console"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "name": "log"
+                                            }
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Literal",
+                                                "value": "run test",
+                                                "raw": "'run test'"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "computed": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "name": "t"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "name": "pass"
+                                            }
+                                        },
+                                        "arguments": []
+                                    }
+                                }
+                            ]
+                        },
+                        "generator": false,
+                        "expression": false
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "Identifier",
+                    "name": "describe"
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "can run",
+                        "raw": "'can run'"
+                    },
+                    {
+                        "type": "FunctionExpression",
+                        "id": null,
+                        "params": [],
+                        "body": {
+                            "type": "BlockStatement",
+                            "body": [
+                                {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                            "type": "Identifier",
+                                            "name": "it"
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Literal",
+                                                "value": "should success",
+                                                "raw": "'should success'"
+                                            },
+                                            {
+                                                "type": "ArrowFunctionExpression",
+                                                "id": null,
+                                                "params": [],
+                                                "body": {
+                                                    "type": "BlockStatement",
+                                                    "body": [
+                                                        {
+                                                            "type": "ExpressionStatement",
+                                                            "expression": {
+                                                                "type": "CallExpression",
+                                                                "callee": {
+                                                                    "type": "MemberExpression",
+                                                                    "computed": false,
+                                                                    "object": {
+                                                                        "type": "Identifier",
+                                                                        "name": "console"
+                                                                    },
+                                                                    "property": {
+                                                                        "type": "Identifier",
+                                                                        "name": "log"
+                                                                    }
+                                                                },
+                                                                "arguments": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "value": "xxxxxxxxxx",
+                                                                        "raw": "'xxxxxxxxxx'"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "generator": false,
+                                                "expression": false
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "generator": false,
+                        "expression": false
+                    }
+                ]
+            }
+        }
+    ],
+    "sourceType": "script"
+}
+{
+    "type": "VariableDeclaration",
+    "declarations": [
+        {
+            "type": "VariableDeclarator",
+            "id": {
+                "type": "Identifier",
+                "name": "ava"
+            },
+            "init": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "Identifier",
+                    "name": "require"
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "ava",
+                        "raw": "'ava'"
+                    }
+                ]
+            }
+        }
+    ],
+    "kind": "const"
+}
+{
+    "type": "Identifier",
+    "name": "mocha"
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "Identifier",
+        "name": "require"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "mocha",
+            "raw": "'mocha'"
+        }
+    ]
+}
+{
+    "type": "Identifier",
+    "name": "require"
+}
+{
+    "type": "Literal",
+    "value": "mocha",
+    "raw": "'mocha'"
+}
+{
+    "type": "VariableDeclaration",
+    "declarations": [
+        {
+            "type": "VariableDeclarator",
+            "id": {
+                "type": "Identifier",
+                "name": "chai"
+            },
+            "init": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "Identifier",
+                    "name": "require"
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "chai",
+                        "raw": "'chai'"
+                    }
+                ]
+            }
+        }
+    ],
+    "kind": "const"
+}
+{
+    "type": "VariableDeclarator",
+    "id": {
+        "type": "Identifier",
+        "name": "chai"
+    },
+    "init": {
+        "type": "CallExpression",
+        "callee": {
+            "type": "Identifier",
+            "name": "require"
+        },
+        "arguments": [
+            {
+                "type": "Literal",
+                "value": "chai",
+                "raw": "'chai'"
+            }
+        ]
+    }
+}
+{
+    "type": "Identifier",
+    "name": "chai"
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "Identifier",
+        "name": "require"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "chai",
+            "raw": "'chai'"
+        }
+    ]
+}
+{
+    "type": "Identifier",
+    "name": "require"
+}
+{
+    "type": "Literal",
+    "value": "chai",
+    "raw": "'chai'"
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "Identifier",
+        "name": "it"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "my passing test",
+            "raw": "'my passing test'"
+        },
+        {
+            "type": "ArrowFunctionExpression",
+            "id": null,
+            "params": [
+                {
+                    "type": "Identifier",
+                    "name": "t"
+                }
+            ],
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "console"
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "log"
+                                }
+                            },
+                            "arguments": [
+                                {
+                                    "type": "Literal",
+                                    "value": "run test",
+                                    "raw": "'run test'"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "t"
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "pass"
+                                }
+                            },
+                            "arguments": []
+                        }
+                    }
+                ]
+            },
+            "generator": false,
+            "expression": false
+        }
+    ]
+}
+{
+    "type": "Identifier",
+    "name": "it"
+}
+{
+    "type": "Literal",
+    "value": "my passing test",
+    "raw": "'my passing test'"
+}
+{
+    "type": "ArrowFunctionExpression",
+    "id": null,
+    "params": [
+        {
+            "type": "Identifier",
+            "name": "t"
+        }
+    ],
+    "body": {
+        "type": "BlockStatement",
+        "body": [
+            {
+                "type": "ExpressionStatement",
+                "expression": {
+                    "type": "CallExpression",
+                    "callee": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                            "type": "Identifier",
+                            "name": "console"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "log"
+                        }
+                    },
+                    "arguments": [
+                        {
+                            "type": "Literal",
+                            "value": "run test",
+                            "raw": "'run test'"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "ExpressionStatement",
+                "expression": {
+                    "type": "CallExpression",
+                    "callee": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                            "type": "Identifier",
+                            "name": "t"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "pass"
+                        }
+                    },
+                    "arguments": []
+                }
+            }
+        ]
+    },
+    "generator": false,
+    "expression": false
+}
+{
+    "type": "Identifier",
+    "name": "t"
+}
+{
+    "type": "BlockStatement",
+    "body": [
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                        "type": "Identifier",
+                        "name": "console"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "log"
+                    }
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "run test",
+                        "raw": "'run test'"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                        "type": "Identifier",
+                        "name": "t"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "pass"
+                    }
+                },
+                "arguments": []
+            }
+        }
+    ]
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "MemberExpression",
+        "computed": false,
+        "object": {
+            "type": "Identifier",
+            "name": "console"
+        },
+        "property": {
+            "type": "Identifier",
+            "name": "log"
+        },
+        "name": "it"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "run test",
+            "raw": "'run test'"
+        }
+    ]
+}
+{
+    "type": "MemberExpression",
+    "computed": false,
+    "object": {
+        "type": "Identifier",
+        "name": "console"
+    },
+    "property": {
+        "type": "Identifier",
+        "name": "log"
+    },
+    "name": "it"
+}
+{
+    "type": "Identifier",
+    "name": "console"
+}
+{
+    "type": "Identifier",
+    "name": "log"
+}
+{
+    "type": "Literal",
+    "value": "run test",
+    "raw": "'run test'"
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "MemberExpression",
+        "computed": false,
+        "object": {
+            "type": "Identifier",
+            "name": "t"
+        },
+        "property": {
+            "type": "Identifier",
+            "name": "pass"
+        },
+        "name": "it"
+    },
+    "arguments": []
+}
+{
+    "type": "MemberExpression",
+    "computed": false,
+    "object": {
+        "type": "Identifier",
+        "name": "t"
+    },
+    "property": {
+        "type": "Identifier",
+        "name": "pass"
+    },
+    "name": "it"
+}
+{
+    "type": "Identifier",
+    "name": "t"
+}
+{
+    "type": "Identifier",
+    "name": "pass"
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "Identifier",
+        "name": "it"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "can run",
+            "raw": "'can run'"
+        },
+        {
+            "type": "FunctionExpression",
+            "id": null,
+            "params": [],
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "Identifier",
+                                "name": "it"
+                            },
+                            "arguments": [
+                                {
+                                    "type": "Literal",
+                                    "value": "should success",
+                                    "raw": "'should success'"
+                                },
+                                {
+                                    "type": "ArrowFunctionExpression",
+                                    "id": null,
+                                    "params": [],
+                                    "body": {
+                                        "type": "BlockStatement",
+                                        "body": [
+                                            {
+                                                "type": "ExpressionStatement",
+                                                "expression": {
+                                                    "type": "CallExpression",
+                                                    "callee": {
+                                                        "type": "MemberExpression",
+                                                        "computed": false,
+                                                        "object": {
+                                                            "type": "Identifier",
+                                                            "name": "console"
+                                                        },
+                                                        "property": {
+                                                            "type": "Identifier",
+                                                            "name": "log"
+                                                        }
+                                                    },
+                                                    "arguments": [
+                                                        {
+                                                            "type": "Literal",
+                                                            "value": "xxxxxxxxxx",
+                                                            "raw": "'xxxxxxxxxx'"
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "generator": false,
+                                    "expression": false
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "generator": false,
+            "expression": false
+        }
+    ]
+}
+{
+    "type": "Identifier",
+    "name": "it"
+}
+{
+    "type": "Literal",
+    "value": "can run",
+    "raw": "'can run'"
+}
+{
+    "type": "FunctionExpression",
+    "id": null,
+    "params": [],
+    "body": {
+        "type": "BlockStatement",
+        "body": [
+            {
+                "type": "ExpressionStatement",
+                "expression": {
+                    "type": "CallExpression",
+                    "callee": {
+                        "type": "Identifier",
+                        "name": "it"
+                    },
+                    "arguments": [
+                        {
+                            "type": "Literal",
+                            "value": "should success",
+                            "raw": "'should success'"
+                        },
+                        {
+                            "type": "ArrowFunctionExpression",
+                            "id": null,
+                            "params": [],
+                            "body": {
+                                "type": "BlockStatement",
+                                "body": [
+                                    {
+                                        "type": "ExpressionStatement",
+                                        "expression": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                                "type": "MemberExpression",
+                                                "computed": false,
+                                                "object": {
+                                                    "type": "Identifier",
+                                                    "name": "console"
+                                                },
+                                                "property": {
+                                                    "type": "Identifier",
+                                                    "name": "log"
+                                                }
+                                            },
+                                            "arguments": [
+                                                {
+                                                    "type": "Literal",
+                                                    "value": "xxxxxxxxxx",
+                                                    "raw": "'xxxxxxxxxx'"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            "generator": false,
+                            "expression": false
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "generator": false,
+    "expression": false
+}
+{
+    "type": "BlockStatement",
+    "body": [
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "Identifier",
+                    "name": "it"
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "should success",
+                        "raw": "'should success'"
+                    },
+                    {
+                        "type": "ArrowFunctionExpression",
+                        "id": null,
+                        "params": [],
+                        "body": {
+                            "type": "BlockStatement",
+                            "body": [
+                                {
+                                    "type": "ExpressionStatement",
+                                    "expression": {
+                                        "type": "CallExpression",
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "computed": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "name": "console"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "name": "log"
+                                            }
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Literal",
+                                                "value": "xxxxxxxxxx",
+                                                "raw": "'xxxxxxxxxx'"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "generator": false,
+                        "expression": false
+                    }
+                ]
+            }
+        }
+    ]
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "Identifier",
+        "name": "it"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "should success",
+            "raw": "'should success'"
+        },
+        {
+            "type": "ArrowFunctionExpression",
+            "id": null,
+            "params": [],
+            "body": {
+                "type": "BlockStatement",
+                "body": [
+                    {
+                        "type": "ExpressionStatement",
+                        "expression": {
+                            "type": "CallExpression",
+                            "callee": {
+                                "type": "MemberExpression",
+                                "computed": false,
+                                "object": {
+                                    "type": "Identifier",
+                                    "name": "console"
+                                },
+                                "property": {
+                                    "type": "Identifier",
+                                    "name": "log"
+                                }
+                            },
+                            "arguments": [
+                                {
+                                    "type": "Literal",
+                                    "value": "xxxxxxxxxx",
+                                    "raw": "'xxxxxxxxxx'"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "generator": false,
+            "expression": false
+        }
+    ]
+}
+{
+    "type": "Identifier",
+    "name": "it"
+}
+{
+    "type": "Literal",
+    "value": "should success",
+    "raw": "'should success'"
+}
+{
+    "type": "ArrowFunctionExpression",
+    "id": null,
+    "params": [],
+    "body": {
+        "type": "BlockStatement",
+        "body": [
+            {
+                "type": "ExpressionStatement",
+                "expression": {
+                    "type": "CallExpression",
+                    "callee": {
+                        "type": "MemberExpression",
+                        "computed": false,
+                        "object": {
+                            "type": "Identifier",
+                            "name": "console"
+                        },
+                        "property": {
+                            "type": "Identifier",
+                            "name": "log"
+                        }
+                    },
+                    "arguments": [
+                        {
+                            "type": "Literal",
+                            "value": "xxxxxxxxxx",
+                            "raw": "'xxxxxxxxxx'"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "generator": false,
+    "expression": false
+}
+{
+    "type": "BlockStatement",
+    "body": [
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "CallExpression",
+                "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                        "type": "Identifier",
+                        "name": "console"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "log"
+                    }
+                },
+                "arguments": [
+                    {
+                        "type": "Literal",
+                        "value": "xxxxxxxxxx",
+                        "raw": "'xxxxxxxxxx'"
+                    }
+                ]
+            }
+        }
+    ]
+}
+{
+    "type": "CallExpression",
+    "callee": {
+        "type": "MemberExpression",
+        "computed": false,
+        "object": {
+            "type": "Identifier",
+            "name": "console"
+        },
+        "property": {
+            "type": "Identifier",
+            "name": "log"
+        },
+        "name": "it"
+    },
+    "arguments": [
+        {
+            "type": "Literal",
+            "value": "xxxxxxxxxx",
+            "raw": "'xxxxxxxxxx'"
+        }
+    ]
+}
+{
+    "type": "MemberExpression",
+    "computed": false,
+    "object": {
+        "type": "Identifier",
+        "name": "console"
+    },
+    "property": {
+        "type": "Identifier",
+        "name": "log"
+    },
+    "name": "it"
+}
+{
+    "type": "Identifier",
+    "name": "console"
+}
+{
+    "type": "Identifier",
+    "name": "log"
+}
+{
+    "type": "Literal",
+    "value": "xxxxxxxxxx",
+    "raw": "'xxxxxxxxxx'"
+}
+const mocha = require('mocha');
+const chai = require('chai');
+it('my passing test', t => {
+    console.log('run test');
+    t.pass();
+});
+it('can run', function () {
+    it('should success', () => {
+        console.log('xxxxxxxxxx');
+    });
+});
